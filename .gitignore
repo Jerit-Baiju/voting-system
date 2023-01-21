@@ -116,3 +116,4 @@ voting/migrations/*
 account/migrations/*
 # static/
 # README.md
+migrations

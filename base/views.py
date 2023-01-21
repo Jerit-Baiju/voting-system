@@ -6,6 +6,7 @@ from django.utils.text import slugify
 from django.contrib import messages
 from django.conf import settings
 from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
 import requests
 import json
 # Create your views here.
@@ -98,7 +99,7 @@ def generate_otp():
         otp += str(r.randint(1, 9))
     return otp
 
-
+@login_required
 def dashboard(request):
     user = request.user
     # * Check if this voter has been verified
