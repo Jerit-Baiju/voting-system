@@ -1,8 +1,8 @@
 from django.shortcuts import render, reverse, redirect
-from voting.models import Voter, Position, Candidate, Votes
-from account.models import CustomUser
-from account.forms import CustomUserForm
-from voting.forms import *
+from base.models import Voter, Position, Candidate, Votes
+from accounts.models import User
+from accounts.forms import CustomUserForm
+from base.forms import *
 from django.contrib import messages
 from django.http import JsonResponse, HttpResponse
 from django.conf import settings

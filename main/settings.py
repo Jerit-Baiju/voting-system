@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-7)6)v%4ixq5t&p)x$_!_(yu+!#acgo@hukc6_w$p6#^!bbuu&j
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '192.168.31.109'
+    '192.168.31.109',
+    '192.168.43.160',
 ]
 
 AUTH_USER_MODEL = 'accounts.User'
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
 
     'accounts.apps.AccountsConfig',
     'base.apps.BaseConfig',
+    'administrator.apps.AdministratorConfig'
 ]
 
 MIDDLEWARE = [
@@ -122,7 +124,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILE_DIRS = BASE_DIR / 'static'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

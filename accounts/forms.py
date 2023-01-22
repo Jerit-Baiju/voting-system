@@ -58,4 +58,4 @@ class CustomUserForm(FormSettings):
 
     class Meta:
         model = User
-        fields = ['last_name', 'first_name', 'email', 'password', ]
+        fields = ['first_name', 'last_name', 'email', 'password', ]
